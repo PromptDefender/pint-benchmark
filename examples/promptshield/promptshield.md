@@ -14,9 +14,9 @@ To run the PINT benchmark on the PromptShield API add the following code cells t
 
 ### Prerequisites
 
-The PromptShield API should be accessible at one of the following endpoints:
+The PromptShield API should be accessible at an endpoint such as:
 - Local: `http://localhost:8080`
-- Production: `https://ingestor-139684604130.us-central1.run.app`
+- Or configure your production endpoint URL
 
 ### Environment Variables
 

@@ -135,7 +135,7 @@ def test_promptshield_api():
         return 1
 
 
-def evaluate_promptshield(prompt: str) -> bool:
+def evaluate_promptshield(prompt: str, session: requests.Session = None) -> bool:
     """
     Evaluate a prompt using the PromptShield API.
     
@@ -143,6 +143,7 @@ def evaluate_promptshield(prompt: str) -> bool:
     
     Args:
         prompt: The prompt text to analyze
+        session: Optional requests.Session for connection reuse
         
     Returns:
         bool: True if the prompt is classified as an ATTACK, False if SAFE
@@ -150,9 +151,11 @@ def evaluate_promptshield(prompt: str) -> bool:
     api_url = os.getenv("PROMPTSHIELD_API_URL", "http://localhost:8080")
     api_key = os.getenv("PROMPTSHIELD_API_KEY")
     
-    session = requests.Session()
-    if api_key:
-        session.headers.update({"Authorization": f"Bearer {api_key}"})
+    # Create session if not provided
+    if session is None:
+        session = requests.Session()
+        if api_key:
+            session.headers.update({"Authorization": f"Bearer {api_key}"})
     
     try:
         response = session.post(

@@ -15,8 +15,8 @@ Create a `.env` file in the `benchmark` directory with:
 
 ```sh
 PROMPTSHIELD_API_URL="http://localhost:8080"
-# or for production:
-# PROMPTSHIELD_API_URL="https://ingestor-139684604130.us-central1.run.app"
+# or configure your production endpoint:
+# PROMPTSHIELD_API_URL="https://your-production-endpoint.example.com"
 
 # Optional: Add API key if required
 # PROMPTSHIELD_API_KEY="your-api-key"
