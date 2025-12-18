@@ -43,9 +43,10 @@ You can find the utility function in the [`evaluate_hugging_face_model`](../benc
 
 For other prompt injection detection tools, you can use the PINT Benchmark to evaluate their performance, but you'll need to create a custom evaluation function.
 
-We're going to add more examples of how to evaluate other prompt injection detection tools in the future, but for now, we have one example you can refer to:
+We're going to add more examples of how to evaluate other prompt injection detection tools in the future, but for now, we have these examples you can refer to:
 
 - [`whylabs/langkit`](./whylabs/langkit.md): Benchmark WhyLabs LangKit
+- [`promptshield`](./promptshield/promptshield.md): Benchmark PromptShield API
 
 ### Custom datasets
 
