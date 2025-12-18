@@ -24,8 +24,8 @@ Set the PromptShield API endpoint in your `.env` file:
 
 ```sh
 PROMPTSHIELD_API_URL="http://localhost:8080"
-# or for production:
-# PROMPTSHIELD_API_URL="https://ingestor-139684604130.us-central1.run.app"
+# or configure your production endpoint:
+# PROMPTSHIELD_API_URL="https://your-production-endpoint.example.com"
 ```
 
 **Note**: If you need authentication for the API, you can add an API key:
